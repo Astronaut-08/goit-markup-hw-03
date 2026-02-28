@@ -10,18 +10,48 @@ img {
     object-fit: cover;
 }
 
+.link {
+    margin-right: 0;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .top-bar {
     background-color: #FFFFFF;
-    display: flex;
     align-items: center;
     padding: 24px 156px;
     justify-content: center;
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.top-bar-div {
+    display: flex;
 }
 
 .bar-nav-list {
     display: flex;
-    align-items: center;
     gap: 40px;
+}
+
+.bar-nav-list .link {
+    padding: 24px 0;
 }
 
 .logo {
@@ -32,7 +62,7 @@ img {
     font-weight: 700;
     font-size: 18px;
     color: #4D5AE5;
-    padding-left: calc(100%-156px);
+    margin-right: 76px;
 }
 
 .logo-s {
@@ -98,7 +128,6 @@ ul {
     line-height: 1.07;
     letter-spacing: 0.02em;
     max-width: 496px;
-    margin-bottom: 48px;
 }
 
 .hero-section {
@@ -109,11 +138,7 @@ ul {
     line-height: 60px;
     text-align: center;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 188px 472px;
-    justify-content: center;
+    padding: 188px 0;
 }
 
 .hero-button {
@@ -125,9 +150,11 @@ ul {
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    padding: 16px 32px 16px 32px;
+    display: block;
+    max-width: 169px;
+    height: 56px;
+    border: none;
     border-radius: 4px;
-    margin: 0;
 }
 
 .hero-button:hover,
@@ -136,16 +163,17 @@ ul {
     background-color: #404BBF;
 }
 
+.feature-section {
+    padding: 120px 0;
+}
+
 .feature-list {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 5% 156px 5% 156px;
-    justify-content: center;
+    gap: 24px;
 }
 
 .feature-item {
-    flex-basis: 264px;
+    width: calc((100% - 72px) / 4);
 }
 
 .title-feature {
@@ -166,42 +194,46 @@ ul {
 
 .team-section {
     background-color: #F4F4FD;
-    padding: 5% 156px 5% 156px;
+    padding: 120px 0;
 }
 
-.team-section .title-team-section {
+.title-team-section {
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 
 .team-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+    gap: 24px;
 }
 
 .team-card {
     background-color: #FFFFFF;
-    flex-basis: 264px;
-    border-radius: 4px;
+    width: calc(100% -72px) / 4;
+    border-radius: 0 0 4px 4px;
     overflow: hidden;
 }
 
-.team-section .team-card .title-card {
+.team-card-under {
+    padding: 32px 0;
+}
+
+.title-card {
     font-weight: 500;
     letter-spacing: 0.02em;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     color: #2E2F42;
+    margin-bottom: 8px;
 }
 
-.team-section .team-card .p-card {
+.p-card {
     font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 24px;
@@ -222,34 +254,33 @@ ul {
 
 .portfolio-section {
     background-color: #FFFFFF;
-    padding: 5% 156px 5% 156px;
+    padding: 120px 0;
 }
 
 .portfolio-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: (2, auto);
-    row-gap: 48px;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 24px;
-    justify-items: center;
+    row-gap: 48px;
 }
 
 .portfolio-card {
-    border: 1px solid #E7E9FC;
-    overflow: hidden;
-    flex-basis: 360px;
+    width: calc((100% - 48px) / 3);
 }
 
 .under-portfolio-card {
+    border: 1px solid #E7E9FC;
     padding: 32px 16px;
+    border-top: none;
 }
 
-.portfolio-section .title-portfolio {
+.title-portfolio {
     font-weight: 500;
     letter-spacing: 0.02em;
     font-size: 20px;
     line-height: 1.2;
     color: #2E2F42;
+    margin-bottom: 8px;
 }
 
 .portfolio-section .p-portfolio {
@@ -265,6 +296,7 @@ ul {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 16px;
+    display: inline-block;
 }
 
 .footer-section .logo-s {
@@ -277,8 +309,7 @@ ul {
 
 .footer-section {
     background-color: #2E2F42;
-    padding: 100px 156px;
-    display: flex;
+    padding: 100px 0;
 }
 
 .footer-description {
